@@ -1,7 +1,7 @@
 # Wyne_Spring
 
 ## 패키지 패턴
-    - ex) com.springlec.login  // com.springlec.join  
+    - ex) com.springlec.login  // com.springlec.join. // com.springlec.login.dao // com.springlec.login.dto  
 
 ## Dao, Dto 
     - ex) LoginDao , LoginDto  // JoinDao, JoinDto
@@ -19,4 +19,3 @@
          // 로그인 컨트롤러,...등등. 
          ///////////////////////////////////
 
-##넵!
