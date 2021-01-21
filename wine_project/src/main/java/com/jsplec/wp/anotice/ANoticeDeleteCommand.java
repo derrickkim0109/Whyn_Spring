@@ -18,6 +18,7 @@ public class ANoticeDeleteCommand implements ACommand {
 	      //AUserLDao userdao = new AUserLDao();
 	      for(int i=0;i<deleteCheck.length;i++) {
 	    	  ndao.noticeDelete(deleteCheck[i]);
+	    	  //
 	    	  
 	    	  System.out.println(deleteCheck[i]);
 	      }
