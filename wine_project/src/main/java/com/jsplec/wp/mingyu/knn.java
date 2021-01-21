@@ -26,11 +26,6 @@ public class knn {
 //		System.out.println("knn");
 //		knn("classification/knn_train.txt","classification/knn_test.txt",1,2);
 //		System.out.println();
-//		
-		
-		
-	
-
 	
 		
 	}
