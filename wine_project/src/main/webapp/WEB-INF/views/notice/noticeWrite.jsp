@@ -12,7 +12,7 @@
 </style>
 
 
-<%@ include file="adminCategory.jsp"%>
+<%@ include file="../admin/adminCategory.jsp"%>
 
 <title>공지 글쓰기</title>
 </head>

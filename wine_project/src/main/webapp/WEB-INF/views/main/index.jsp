@@ -17,7 +17,7 @@
 <title>당신이 와인을 먹는 N가지 이유 WHYN</title>
 </head>
 <body>
-<%@ include file="header.jsp" %>
+<%@ include file="../header.jsp" %>
 
 <div class="movie_back">
 	<div class="m_textBox">
@@ -41,6 +41,6 @@
 	
 </div>
 
-<%@ include file="footer.jsp" %>
+<%@ include file="../footer.jsp" %>
 </body>
 </html>

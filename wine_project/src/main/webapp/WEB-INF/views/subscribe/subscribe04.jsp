@@ -16,7 +16,7 @@
 	
 %>
 
-<%@ include file="header.jsp" %>
+<%@ include file="../header.jsp" %>
 <style>
 body{background-image:url("img/woodbg.jpg"); color:#997f49; width:100%; }
 .wine_box1{background:#fff; width:400px; padding:50px; border:double 5px #997f49; margin:50px auto; text-align: center;}
@@ -68,6 +68,6 @@ body{background-image:url("img/woodbg.jpg"); color:#997f49; width:100%; }
 		
 	</table>
 </div>	
-	<%@ include file="footer.jsp" %>
+	<%@ include file="../footer.jsp" %>
 </body>
 </html>

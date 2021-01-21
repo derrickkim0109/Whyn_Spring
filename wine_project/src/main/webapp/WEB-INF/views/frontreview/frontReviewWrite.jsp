@@ -19,7 +19,7 @@
 </style>
 </head>
 <body>
-<%@ include file="header.jsp" %>
+<%@ include file="../header.jsp" %>
 
 <script>
 $(document).ready(function(){
@@ -120,7 +120,7 @@ $(document).ready(function(){
 	</form>
 </div>
 
-<%@ include file="footer.jsp" %>
+<%@ include file="../footer.jsp" %>
 
 </body>
 </html>

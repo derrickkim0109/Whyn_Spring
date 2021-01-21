@@ -34,7 +34,7 @@ a{ color:#5a5a5a;}
 <body>
 
 <!-- 메인 화면 카테고리 include -->
-<%@include file="adminCategory.jsp" %>
+<%@include file="../admin/adminCategory.jsp" %>
 <h2 align="center">후기관리 </h2>
 
 <br>

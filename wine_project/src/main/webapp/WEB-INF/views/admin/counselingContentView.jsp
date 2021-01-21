@@ -18,7 +18,7 @@
 </style>
 </head>
 <body>
-<%@ include file="header.jsp" %>
+<%@ include file="../header.jsp" %>
 <form action="counselingWrite.do" method="post">
 <div class="container">
 <p style="color:#997f49; font-size:25px; padding:20px; font-weight: bold" >문의글</p>

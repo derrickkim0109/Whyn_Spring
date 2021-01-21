@@ -8,7 +8,7 @@
 </head>
 <body>
 
-<%@ include file="header.jsp" %>
+<%@ include file="../header.jsp" %>
 <!-- * 카카오맵 - 지도퍼가기 -->
 <!-- 1. 지도 노드 -->
 <div id="daumRoughmapContainer1606289578404" class="root_daum_roughmap root_daum_roughmap_landing"></div>
@@ -29,6 +29,6 @@
 	}).render();
 </script>
 
-<%@ include file="footer.jsp" %>
+<%@ include file="../footer.jsp" %>
 </body>
 </html>

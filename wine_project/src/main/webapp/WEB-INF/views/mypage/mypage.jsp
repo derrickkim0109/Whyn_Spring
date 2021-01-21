@@ -151,7 +151,7 @@ function goPopup(){
 </head>
 <body>
 
-<%@ include file="header.jsp" %>
+<%@ include file="../header.jsp" %>
 <style>
 body{background: linear-gradient(#fffaef, #999); text-align:center; color:#997f49;}
 .u_info{width:470px; margin:0 auto; text-align: center;}
@@ -340,7 +340,7 @@ body{background: linear-gradient(#fffaef, #999); text-align:center; color:#997f4
 </form>
 
 </section>
-<%@ include file="footer.jsp" %>
+<%@ include file="../footer.jsp" %>
 </body>
 
 </html>
