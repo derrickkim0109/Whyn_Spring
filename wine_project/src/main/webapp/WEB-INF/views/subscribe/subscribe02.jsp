@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<%@ include file="header.jsp" %>
+<%@ include file="../header.jsp" %>
 <style>
 body{background-image:url("img/woodbg.jpg"); color:#997f49; width:100%; }
 .guinfo p{width:60%; border-bottom:1px #997f49 dotted; margin: 0 auto; padding:10px;}
@@ -114,7 +114,7 @@ $(document).ready(function(){
 	
 	
 </div>
-<%@ include file="footer.jsp" %>
+<%@ include file="../footer.jsp" %>
 </body>
 <script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 <script>
