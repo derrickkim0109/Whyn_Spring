@@ -1,17 +1,19 @@
 # Wyne_Spring
 
 ## 패키지 패턴
+
     - ex)// com.springlec.controller.join//  //com.springlec.dao.mapper.join //com.springlec.dao.join//     com.springlec.dto.join
                         
-## Dao, Dto 
-    - ex) LoginDao , LoginDto  // JoinDao, JoinDto
+
+## Dao, Dto
+    - ex) LoginDao , LoginDto  // JoinDao, JoinDto,..
 
 ## JSP
     - ex) admin_subscribe, admin_counseiling_Management, admin_counseling_ContentView
-          admin_deliveryView
+          admin_deliveryView,...
 
 ## Controller
-    - ex) Controller_Login , Controller_Join, 
+    - ex) Controller_Login , Controller_Join,...
 
 ## 주석처리 무조건  
          ///////////////////////////////////
@@ -22,3 +24,4 @@
 ## 커밋 시
         -ex) 2021.01.21 이름 
         (설명플리즈)
+
