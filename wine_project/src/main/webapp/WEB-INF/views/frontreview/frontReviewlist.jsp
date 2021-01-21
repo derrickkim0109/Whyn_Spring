@@ -9,7 +9,7 @@
 <title>고객님들의 생생 리뷰를 소개해드립니다.</title>
 </head>
 <body>
-<%@ include file="header.jsp" %>
+<%@ include file="../header.jsp" %>
 
 <!-- <script>
 $(document).ready(function(){
@@ -160,6 +160,6 @@ $(document).ready(function(){
 			
 <div class="b_bg"></div>			
 			
-<%@ include file="footer.jsp" %>
+<%@ include file="../footer.jsp" %>
 </body>
 </html>

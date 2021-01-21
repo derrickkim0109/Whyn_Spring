@@ -17,7 +17,7 @@ body{background: linear-gradient(#fffaef, #666); text-align:center;}
 </head>
 <body>
 
-<%@ include file="header.jsp" %>
+<%@ include file="../header.jsp" %>
 
 	<%request.setCharacterEncoding("utf-8"); %>
 	<c:set var="fieldCheck" value="${user.loginFieldCheckMessage}"></c:set>
@@ -74,7 +74,7 @@ padding:10px; float:left; border:2px #fff solid; box-sizing:border-box; font-siz
 	</a>
 </div>		
 
-<%@ include file="footer.jsp" %>
+<%@ include file="../footer.jsp" %>
 
 
 </body>

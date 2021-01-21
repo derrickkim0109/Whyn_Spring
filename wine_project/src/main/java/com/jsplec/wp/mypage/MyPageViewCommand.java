@@ -19,7 +19,7 @@ public class MyPageViewCommand implements ACommand {
 	public void execute(HttpServletRequest request, HttpServletResponse response, HttpSession session) {
 		int userno = (int)session.getAttribute("USERNO");
 		String userid = (String)session.getAttribute("USERID");
-		MyPageDao dao = new MyPageDao();
+		MyPageIDao dao = new MyPageIDao();
 		
 		
 		
@@ -32,7 +32,7 @@ public class MyPageViewCommand implements ACommand {
 	
 		//delivery 정보
 		String duserid = (String)session.getAttribute("USERID");
-		MyPageDao dao1 = new MyPageDao();
+		MyPageIDao dao1 = new MyPageIDao();
 		MyPageDto deliverydto = dao1.deliveryUserinfoView(duserid);
 		
 		request.setAttribute("deliveryView",deliverydto );

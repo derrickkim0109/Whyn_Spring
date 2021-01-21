@@ -14,7 +14,7 @@ h3{padding: 30px; color:  #5a5a5a;}
 </style>
 
 
-<%@ include file="adminCategory.jsp"%>
+<%@ include file="../admin/adminCategory.jsp"%>
 <title>후기확인 및 수정</title>
 </head>
 <body>

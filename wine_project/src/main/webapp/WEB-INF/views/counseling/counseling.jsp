@@ -31,7 +31,7 @@
 </style>
 
 
-<%@ include file="header.jsp" %>
+<%@ include file="../header.jsp" %>
 
 <div class="container">
 	<div class="tablebg"></div>
@@ -97,6 +97,6 @@
 	</div>
 	
 </div>
-<%@ include file="footer.jsp" %>
+<%@ include file="../footer.jsp" %>
 </body>
 </html>

@@ -6,7 +6,7 @@
 <head>
 <meta charset="UTF-8">
 
-<%@include file="adminCategory.jsp" %>
+<%@include file="../admin/adminCategory.jsp" %>
 <title>오늘의 리뷰 </title>
 </head>
 <body>

@@ -25,7 +25,7 @@
 </style>
 </head>
 <body>
-<%@ include file="header.jsp" %>
+<%@ include file="../header.jsp" %>
 
 <%
 
@@ -89,6 +89,6 @@ if(beforenoticeno==null){
 	
 </div>
 
-	<%@ include file="footer.jsp" %>
+	<%@ include file="../footer.jsp" %>
 </body>
 </html>

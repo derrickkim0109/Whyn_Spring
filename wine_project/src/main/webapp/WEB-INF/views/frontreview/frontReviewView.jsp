@@ -8,7 +8,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<%@ include file="header.jsp" %>
+<%@ include file="../header.jsp" %>
 <a href= "ReviewLike.do?reno=${reviewView.reno}&rreno=${reviewView.reno}"></a>
 <!-- 댓글접기 채크변수 -->
 <!-- ch = index -->
@@ -126,7 +126,7 @@ body{background: linear-gradient(#fffaef, #fff);}
 </section>
 <div style="text-align: center; border:1px #997f49 solid; background: #fff; margin:20px auto; width:70px; padding:10px; color:#997f49;"><a href="frontReviewlist.do" style="color:#997f49;">목록으로</a></div>
 	
-<%@ include file="footer.jsp" %>
+<%@ include file="../footer.jsp" %>
 	
 	
 	

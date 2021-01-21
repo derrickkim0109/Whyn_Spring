@@ -20,7 +20,7 @@ a{ color:#5a5a5a;}
 <title>새로운 후기목록 </title>
 
 
-<%@include file="adminCategory.jsp" %>
+<%@include file="../admin/adminCategory.jsp" %>
 <h2 align="center">후기관리 </h2>
 </head>
 <body>

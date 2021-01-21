@@ -1,4 +1,4 @@
-package com.jsplec.wp.dao;
+package com.jsplec.wp.mypage.dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -10,10 +10,10 @@ import javax.naming.InitialContext;
 import javax.sql.DataSource;
 import com.jsplec.wp.dto.MyPageDto;
 
-public class MyPageDao {
+public class MyPageIDao {
 	DataSource dataSource;
 	
-	public MyPageDao() {
+	public MyPageIDao() {
 		try {
 			Context context = new InitialContext();
 			dataSource = (DataSource) context.lookup("java:comp/env/jdbc/mvc");

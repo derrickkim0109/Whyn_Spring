@@ -39,7 +39,7 @@ function jusoCallBack(roadFullAddr,roadAddrPart1,addrDetail,roadAddrPart2,engAdd
 
 <title>Insert title here</title>
 </head>
-<%@ include file="header.jsp" %>
+<%@ include file="../header.jsp" %>
 <body class="join_us">
 <style>
 body{background: linear-gradient(#fffaef, #999); text-align:center;}
@@ -401,7 +401,7 @@ $(document).ready(function(){
 
 
 	
-<%@ include file="footer.jsp" %>	
+<%@ include file="../footer.jsp" %>	
 
 </body>
 </html>
