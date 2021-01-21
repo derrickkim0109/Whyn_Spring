@@ -1,17 +1,17 @@
 # Wyne_Spring
 
 ## 패키지 패턴
-    - ex) com.springlec.login  // com.springlec.join. // com.springlec.login.dao // com.springlec.login.dto  
+    - ex) com.springlec.login  // com.springlec.join. // com.springlec.login.dao // com.springlec.login.dto,..
 
 ## Dao, Dto 
-    - ex) LoginDao , LoginDto  // JoinDao, JoinDto
+    - ex) LoginDao , LoginDto  // JoinDao, JoinDto,..
 
 ## JSP
     - ex) admin_subscribe, admin_counseiling_Management, admin_counseling_ContentView
-          admin_deliveryView
+          admin_deliveryView,...
 
 ## Controller
-    - ex) Controller_Login , Controller_Join, 
+    - ex) Controller_Login , Controller_Join,...
 
 ## 주석처리 무조건  
          ///////////////////////////////////
