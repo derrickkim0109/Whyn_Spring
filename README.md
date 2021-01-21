@@ -1,8 +1,8 @@
 # Wyne_Spring
 
 ## 패키지 패턴
-    - ex) com.springlec.login  // com.springlec.join  
-
+    - ex)// com.springlec.controller.join//  //com.springlec.dao.mapper.join //com.springlec.dao.join//     com.springlec.dto.join
+                        
 ## Dao, Dto 
     - ex) LoginDao , LoginDto  // JoinDao, JoinDto
 
