@@ -1,4 +1,4 @@
-package com.jsplec.wp.dto;
+package com.jsplec.wp.login;
 
 public class LoginDto {
 	private String loginFieldCheckMessage;

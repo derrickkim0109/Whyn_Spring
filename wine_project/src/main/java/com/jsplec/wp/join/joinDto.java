@@ -1,4 +1,4 @@
-package com.jsplec.wp.dto;
+package com.jsplec.wp.join;
 
 public class joinDto {
 	private String username;

@@ -20,18 +20,18 @@ public class CounselingPagingCommand implements ACommand {
 		System.out.println(userid);
 		CounselingDao dao = new CounselingDao();
 		ArrayList<CounselingDto> dtos = dao.counselingList(userid);
-		int RowCount = dao.counselingListCount(userid);
-		int allcount = dao.allCount(userid);
-		int answerCount = dao.answerCount(userid);
-		
-		int pageRow=10;
-		int beginNum=(nowPage*pageRow)-pageRow;
-		int endNum=(nowPage*pageRow)-1;
-		int totalPage=(RowCount/pageRow);
-		if(RowCount%10!=0) {
-			totalPage++;
-		}
-		
+//		int RowCount = dao.counselingListCount(userid);
+//		int allcount = dao.allCount(userid);
+//		int answerCount = dao.answerCount(userid);
+//		
+//		int pageRow=10;
+//		int beginNum=(nowPage*pageRow)-pageRow;
+//		int endNum=(nowPage*pageRow)-1;
+//		int totalPage=(RowCount/pageRow);
+//		if(RowCount%10!=0) {
+//			totalPage++;
+//		}
+//		
 
 
 		
