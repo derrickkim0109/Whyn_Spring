@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	
+	<mapper namespace="com.jsplec.wp.MypageIDao">
+	
+		<select id="listDao" resultType="com.springlec.base.dto.BDto">
+			SELECT * FROM friendlist.ADDRESS ORDER BY BID DESC
+		
+		</select>
+		
+		
+		<insert id="writeDao">
+			INSERT INTO friendlist.ADDRESS (bName,bPhone,bAddress,bEmail,bRelation) VALUES(#{param1},#{param2},#{param3},#{param4},#{param5})
+		</insert>
+		
+		<delete id="deleteDao">
+			DELETE FROM friendlist.ADDRESS WHERE bId=#{param1}
+		</delete>
+		<select id="content_viewDao" resultType="com.springlec.base.dto.BDto">
+			SELECT * FROM friendlist.ADDRESS WHERE bId=#{param1}
+		</select>
+		
+		<update id="modifyDao">
+			Update friendlist.ADDRESS SET bName = #{param1}, bPhone = #{param2}, bAddress=#{param3}, bEmail = #{param4}, bRelation = #{param5} WHERE bId=#{param6}
+		</update>
+	</mapper>

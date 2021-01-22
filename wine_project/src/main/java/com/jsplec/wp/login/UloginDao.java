@@ -1,4 +1,4 @@
-package com.jsplec.wp.dao;
+package com.jsplec.wp.login;
 
 import java.sql.Connection;
 
