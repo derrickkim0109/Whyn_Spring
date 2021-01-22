@@ -27,23 +27,45 @@ public class WineListController {
 			WineListIDao dao = sqlSession.getMapper(WineListIDao.class); 
 			model.addAttribute("winelist", dao.listDao());
 			System.out.println("model  :  " + model);
-			return "/winelist";
+			return "/wineList/winelist";
 		}
 		
 		// 리스트 내용보기
 		@RequestMapping("wineContentView")
 		public String view(HttpServletRequest request, Model model) {
 			WineListIDao dao = sqlSession.getMapper(WineListIDao.class);
-			model.addAttribute("wineContent_View", dao.contentDao(Integer.parseInt(request.getParameter("pno"))));
-			return "contentView";
+			model.addAttribute("wineContent_View", dao.contentDao(request.getParameter("pno")));
+			return "/wineList/contentView";
 		}
 		
 		// 불러온 내용 수정하기
 		@RequestMapping("/modify")
 		public String modify(HttpServletRequest request, Model model) {
 			WineListIDao dao = sqlSession.getMapper(WineListIDao.class);
-			dao.modifyDao(Integer.parseInt(request.getParameter("pno")), request.getParameter("pname"), Integer.parseInt(request.getParameter("pcount")), request.getParameter("pcountry"), request.getParameter("pcolor"), request.getParameter("ptext"), Integer.parseInt(request.getParameter("pcontent")));
-			return "redirect:winelist";
+			dao.modifyDao(request.getParameter("pno"), request.getParameter("pname"), request.getParameter("pcount"), request.getParameter("pcountry"), request.getParameter("pcolor"), request.getParameter("ptext"), request.getParameter("pcontent"));
+			return "redirect:/winelist";
+		}
+		
+		// 작성 페이지 띄우기
+		@RequestMapping("write_view") 
+			public String writeForm() {
+			return "wineList/wineWrite";
+		}
+		// 작성 액션
+		@RequestMapping("write")
+		public String write(HttpServletRequest request, Model model) {
+			WineListIDao dao = sqlSession.getMapper(WineListIDao.class);
+			dao.writeDao(request.getParameter("pname"), request.getParameter("pcount"), request.getParameter("pcountry"), request.getParameter("pcolor"), request.getParameter("ptext"), request.getParameter("pcontent"));
+			return "redirect:/winelist";
+		}
+		// 삭제 액션
+		@RequestMapping("delete")
+		public String delete(HttpServletRequest request, Model model) {
+			WineListIDao dao = sqlSession.getMapper(WineListIDao.class);
+			
+			
+			dao.deleteDao(Integer.parseInt(request.getParameter("pno")));
+			return "redirect:/winelist";
 		}
 	
 

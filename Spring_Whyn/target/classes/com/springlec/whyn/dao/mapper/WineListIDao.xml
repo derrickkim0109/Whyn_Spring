@@ -11,9 +11,9 @@
 	</select>
 	
 	<!-- 와인리스트 작성 -->
-	<!-- <insert id="writeDao">
-		INSERT INTO USERINFO (UNAME, UTELNO, uAddress, UEMAIL, URELATION) VALUES (#{param1},#{param2},#{param3},#{param4},#{param5})
-	</insert>  -->
+	<insert id="writeDao">
+		INSERT INTO PRODUCTLIST (PNAME, PCOUNT, PCOUNTRY, PCOLOR, PTEXT, PCONTENT) VALUES (#{param1},#{param2},#{param3},#{param4},#{param5},#{param6})
+	</insert> 
 	
 	<!--  와인리스트 내용보기 -->
 	<select id="contentDao" resultType="com.springlec.whyn.winelist.WineListDto">
@@ -26,8 +26,8 @@
 	</update>
 	
 	<!-- 와인리스트 삭제 -->
-	<!-- <insert id="deleteDao">
-		DELETE FROM USERINFO WHERE UNO = #{param1} 
-	</insert> -->
+	<insert id="deleteDao">
+		DELETE FROM PRODUCTLIST WHERE PNO = #{param1} 
+	</insert>
 	
 </mapper>
