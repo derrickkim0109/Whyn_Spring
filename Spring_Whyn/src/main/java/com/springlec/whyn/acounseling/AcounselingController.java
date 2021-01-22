@@ -114,7 +114,6 @@ public class AcounselingController {
 		////////////////////페이징///////////////////////////////////////
 		model.addAttribute("beginNum", beginNum);
 		model.addAttribute("endNum", endNum);
-		model.addAttribute("totalPage", totalPage);
 		model.addAttribute("simpleConList",asimpleCounselingDao.simpleConList());
 		model.addAttribute("counselingManagementList",acounselingDao.counselingSearch(request.getParameter("counselingSearchBox"), request.getParameter("counselingSearchBar")));
 		return "counselingManagement";
