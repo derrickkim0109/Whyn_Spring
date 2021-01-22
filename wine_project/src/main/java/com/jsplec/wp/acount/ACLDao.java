@@ -1,4 +1,4 @@
-package com.jsplec.wp.dao;
+package com.jsplec.wp.acount;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -9,8 +9,6 @@ import java.util.ArrayList;
 import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.sql.DataSource;
-
-import com.jsplec.wp.dto.ACLDto;
 
 public class ACLDao {		
 		

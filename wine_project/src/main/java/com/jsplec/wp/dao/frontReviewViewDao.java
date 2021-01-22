@@ -9,7 +9,7 @@ import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.sql.DataSource;
 
-import com.jsplec.wp.dto.ACLDto;
+import com.jsplec.wp.acount.ACLDto;
 import com.jsplec.wp.dto.frontReviewViewDto;
 
 public class frontReviewViewDao {
