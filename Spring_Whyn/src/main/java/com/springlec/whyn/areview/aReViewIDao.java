@@ -23,5 +23,5 @@ public interface aReViewIDao {
 	// 리뷰 눌렀을때 보이기
 	public aReViewDto newReviewContentView(String reno);
 	// 리뷰 눌렀을때 보이기
-	public aReViewDto todayReviewContentView(String reno);
+	public aReViewDto todayReviewContentView();
 }
