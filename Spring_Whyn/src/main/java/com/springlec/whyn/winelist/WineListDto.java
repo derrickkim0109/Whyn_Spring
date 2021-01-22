@@ -18,8 +18,9 @@ public class WineListDto {
 	String wineSearchBar;
 	
 	
+	
 	public WineListDto() {
-		super();
+		
 	}
 
 
