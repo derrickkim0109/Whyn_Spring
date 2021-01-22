@@ -18,8 +18,8 @@ public class DeliveryController {
 	private SqlSession sqlSession;
 	
 	
-	@RequestMapping("ADeliveryL")
-	public String ADeliveryL(Model model, HttpSession session) {
+	@RequestMapping("ADeliveryList")
+	public String ADeliveryL(Model model) {
 		DeliveryIDao dao = sqlSession.getMapper(DeliveryIDao.class);
 		model.addAttribute("fivedate", dao.fivedate());
 		model.addAttribute("tendate", dao.tendate());
@@ -29,7 +29,7 @@ public class DeliveryController {
 	}
 	
 	@RequestMapping("fiveContentView")
-	public String fiveContentView(HttpServletRequest request, Model model, HttpSession session) {
+	public String fiveContentView(HttpServletRequest request, Model model) {
 		DeliveryIDao dao = sqlSession.getMapper(DeliveryIDao.class);
 		model.addAttribute("fiveContentView", dao.fiveContentView(request.getParameter("duserid")));
 		
@@ -37,7 +37,7 @@ public class DeliveryController {
 	}
 	
 	@RequestMapping("tenContentView")
-	public String tenContentView(HttpServletRequest request, Model model, HttpSession session) {
+	public String tenContentView(HttpServletRequest request, Model model) {
 		DeliveryIDao dao = sqlSession.getMapper(DeliveryIDao.class);
 		model.addAttribute("fiveContentView", dao.fiveContentView(request.getParameter("duserid")));
 
@@ -45,7 +45,7 @@ public class DeliveryController {
 	}
 	
 	@RequestMapping("fifteenContentView")
-	public String fifteenContentView(HttpServletRequest request, Model model, HttpSession session) {
+	public String fifteenContentView(HttpServletRequest request, Model model) {
 		DeliveryIDao dao = sqlSession.getMapper(DeliveryIDao.class);
 		model.addAttribute("fiveContentView", dao.fiveContentView(request.getParameter("duserid")));
 

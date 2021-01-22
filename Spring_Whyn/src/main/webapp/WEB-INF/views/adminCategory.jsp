@@ -137,7 +137,7 @@ h1{line-height: 80px; text-decoration:none; text-align: center; }
     </li>
 
     <li class="menu__item">
-      <a href="AUserLCommand.do" class="menu__link" id = "user">
+      <a href="AuserList" class="menu__link" id = "user">
         <span class="menu__title">
           <span class="menu__first-word" data-hover="회원">
        	     회원
@@ -150,7 +150,7 @@ h1{line-height: 80px; text-decoration:none; text-align: center; }
     </li>
 
     <li class="menu__item">
-      <a href="AReviewLCommand.do" class="menu__link" id = "review"> 
+      <a href="AReviewLCommand" class="menu__link" id = "review"> 
         <span class="menu__title">
           <span class="menu__first-word" data-hover="후기">
             	후기
@@ -162,7 +162,7 @@ h1{line-height: 80px; text-decoration:none; text-align: center; }
       </a>
     </li>
     <li class="menu__item">
-      <a href="ADeliveryLCommand.do" class="menu__link" id = "delivery"> 
+      <a href="ADeliveryList" class="menu__link" id = "delivery"> 
         <span class="menu__title">
           <span class="menu__first-word" data-hover="배송">
             	배송
@@ -175,7 +175,7 @@ h1{line-height: 80px; text-decoration:none; text-align: center; }
     </li>
 
     <li class="menu__item">
-      <a href="ACounselingLCommand.do" class="menu__link" id = "counseling">
+      <a href="counselingManagementList" class="menu__link" id = "counseling">
         <span class="menu__title">
           <span class="menu__first-word" data-hover="문의">
             	문의
@@ -188,7 +188,7 @@ h1{line-height: 80px; text-decoration:none; text-align: center; }
     </li>
 
     <li class="menu__item">
-      <a href="AWineLCommand.do" class="menu__link" id="wine">
+      <a href="winelist" class="menu__link" id="wine">
         <span class="menu__title">
           <span class="menu__first-word" data-hover="와인">
             	와인
@@ -201,7 +201,7 @@ h1{line-height: 80px; text-decoration:none; text-align: center; }
     </li>
 
     <li class="menu__item">
-      <a href="ANoticeLCommand.do" class="menu__link" id ="notice">
+      <a href="notice" class="menu__link" id ="notice">
         <span class="menu__title">
           <span class="menu__first-word" data-hover="공지">
             	공지

@@ -37,8 +37,8 @@ a{color: #5a5a5a;  }
 <title>공지사항</title>
 </head>
 <body>
-<%-- <%@include file="adminCategory.jsp" %>
- --%>
+<%@include file="adminCategory.jsp" %>
+
 	<h2 align="center">공지사항</h2>
 	<br>
 	
@@ -50,8 +50,7 @@ a{color: #5a5a5a;  }
 <!-- 	<form action="ANoticeSearchCommand.do" method="post">
 <table class="noticeSearchTable">
  -->
-
-<%-- <!-- 검색 콤보박스 -->
+<!-- 검색 콤보박스 -->
 <tr><td><select name="nSearchBox" >
 	<option value="nno" >번호</option>
 	<option value="ntitle">제목 </option>
@@ -62,7 +61,7 @@ a{color: #5a5a5a;  }
 <td><input type="submit"value="검색"></td></tr>
 </table>
 </form>
-<!-- ------------------------------- --> --%>
+<!-- ------------------------------- --> 
 
 
 <br><br><br>
@@ -73,7 +72,7 @@ a{color: #5a5a5a;  }
 
 <!-- ------------------------------- -->
 <table border="0" class="noticeTable">
-	<tr>  <form action="noticeWrite.jsp" method="post">
+	<tr>  <form action="noticeWrite" method="post">
 
 	<td  colspan="6" align="left"><input type="submit" value="글쓰기" class="write" ></td>
 </form>
