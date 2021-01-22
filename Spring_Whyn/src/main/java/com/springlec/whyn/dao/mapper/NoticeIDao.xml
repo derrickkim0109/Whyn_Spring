@@ -22,7 +22,7 @@
 	</select>
 
 	<update id="noticeUpdate">
-		UPDATE NOTICE SET NTITLE =#{param1}, NCONTENT =#{param2} WHERE NNO=#{param3}
+		UPDATE NOTICE SET NTITLE =#{param2}, NCONTENT =#{param3} WHERE NNO=#{param1}
 	</update>	
 	
 	<select id="noticeSearch" parameterType = "String" resultType="com.springlec.whyn.notice.NoticeDto">
