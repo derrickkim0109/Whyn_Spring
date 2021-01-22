@@ -44,7 +44,7 @@ public class AcounselingController {
 		model.addAttribute("beginNum", beginNum);
 		model.addAttribute("endNum", endNum);
 		model.addAttribute("totalPage", totalPage);
-		return "counselingManagement";
+		return "counseling/counselingManagement";
 	}
 	////////////////////페이징///////////////////////////////////////
 	@RequestMapping("/ACounselingLPaging")
@@ -66,7 +66,7 @@ public class AcounselingController {
 		model.addAttribute("beginNum", beginNum);
 		model.addAttribute("endNum", endNum);
 		model.addAttribute("totalPage", totalPage);
-		return "counselingManagement";
+		return "counseling/counselingManagement";
 	}
 	
 	////////////////////카운슬상세페이지///////////////////////////////////////
@@ -74,28 +74,28 @@ public class AcounselingController {
 	public String counselingContentView(HttpServletRequest request, Model model) {
 		AcounselingDao acounselingDao = sqlSession.getMapper(AcounselingDao.class);
 		model.addAttribute("counselingContentView",acounselingDao.counselingContentView(request.getParameter("cno")));
-		return "/counselingView";
+		return "counseling/counselingView";
 	}
 	////////////////////간편카운슬상세페이지///////////////////////////////////////
 	@RequestMapping("/simpleconView")
 	public String simpleConList(HttpServletRequest request, Model model) {
 		AsimpleCounselingDao asimpleCounselingDao = sqlSession.getMapper(AsimpleCounselingDao.class);
 		model.addAttribute("simpleConList",asimpleCounselingDao.simpleContentView(request.getParameter("scno")));
-		return "/simpleconView";
+		return "counseling/simpleconView";
 	}
 	////////////////////간편카운슬삭제///////////////////////////////////////
 	@RequestMapping("/simpleDelete")
 	public String simpleDelete(HttpServletRequest request,Model model) {
 		AsimpleCounselingDao asimpleCounselingDao = sqlSession.getMapper(AsimpleCounselingDao.class);
 		asimpleCounselingDao.simpleDelete(request.getParameter("deleteCheck1"));
-		return "redirect:counselingManagementList";
+		return "redirect:counseling/counselingManagementList";
 	}
 	////////////////////일반카운슬삭제///////////////////////////////////////
 	@RequestMapping("/counselingDelete")
 	public String counselingDelete(HttpServletRequest request,Model model) {
 		AcounselingDao acounselingDao = sqlSession.getMapper(AcounselingDao.class);
 		acounselingDao.counselingDelete(request.getParameter("deleteCheck"));
-		return "redirect:counselingManagementList";
+		return "redirect:counseling/counselingManagementList";
 	}
 	////////////////////일반카운슬검색///////////////////////////////////////
 	@RequestMapping("/ACounselingSearch")
@@ -116,7 +116,7 @@ public class AcounselingController {
 		model.addAttribute("endNum", endNum);
 		model.addAttribute("simpleConList",asimpleCounselingDao.simpleConList());
 		model.addAttribute("counselingManagementList",acounselingDao.counselingSearch(request.getParameter("counselingSearchBox"), request.getParameter("counselingSearchBar")));
-		return "counselingManagement";
+		return "counseling/counselingManagement";
 	}
 	
 }

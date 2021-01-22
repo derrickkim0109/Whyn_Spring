@@ -62,11 +62,19 @@ public class WineListController {
 		@RequestMapping("delete")
 		public String delete(HttpServletRequest request, Model model) {
 			WineListIDao dao = sqlSession.getMapper(WineListIDao.class);
-			
-			
-			dao.deleteDao(Integer.parseInt(request.getParameter("pno")));
+			String[] deleteCheck = request.getParameterValues("deleteCheck");
+		      //AUserLDao userdao = new AUserLDao();
+		      for(int i=0;i<deleteCheck.length;i++) {
+		    	  dao.deleteDao(deleteCheck[i]);
+		    	 
+		      }
+//			
+//			
+//			dao.deleteDao(request.getParameter("pno"));
 			return "redirect:/winelist";
 		}
+		
+		
 	
 
 }

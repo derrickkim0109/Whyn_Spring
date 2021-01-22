@@ -37,7 +37,7 @@ a{color: #5a5a5a;  }
 <title>공지사항</title>
 </head>
 <body>
-<%@include file="adminCategory.jsp" %>
+<%@include file="../adminCategory.jsp" %>
 
 	<h2 align="center">공지사항</h2>
 	<br>
