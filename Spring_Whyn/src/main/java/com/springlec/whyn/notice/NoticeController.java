@@ -8,7 +8,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.validation.BindingResult;
+
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.springlec.whyn.HomeController;
@@ -52,6 +52,19 @@ public class NoticeController {
 		dao.noticeUpdate(request.getParameter("nno"), request.getParameter("ntitle"), request.getParameter("ncontent"));
 		return "redirect:/notice";
 		
+	}
+	
+	@RequestMapping("noticeDelete")
+	public String noticeDelete(HttpServletRequest request,Model model) {
+		NoticeIDao dao = sqlSession.getMapper(NoticeIDao.class);
+		String[] deleteCheck = request.getParameterValues("deleteCheck");
+	      //AUserLDao userdao = new AUserLDao();
+	      for(int i=0;i<deleteCheck.length;i++) {
+	    	  dao.noticeDelete(deleteCheck[i]);
+	    	  
+	    	  //System.out.println(deleteCheck[i]);
+	      }
+		return "redirect:/notice";
 	}
 	
 	
