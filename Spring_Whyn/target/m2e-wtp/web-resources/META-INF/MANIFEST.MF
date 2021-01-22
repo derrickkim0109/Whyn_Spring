@@ -1,5 +1,9 @@
 Manifest-Version: 1.0
+<<<<<<< HEAD
 Built-By: nina
+=======
+Built-By: godol
+>>>>>>> 9f5e73d9e6483b19ac0065fc6ed347775f70823f
 Build-Jdk: 1.8.0_271
 Created-By: Maven Integration for Eclipse
 

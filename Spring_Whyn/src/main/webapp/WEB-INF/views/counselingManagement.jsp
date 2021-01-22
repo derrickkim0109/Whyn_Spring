@@ -57,7 +57,7 @@ tr{padding: 5px;}
 <br>
 
 <!-- 검색 버튼 눌렀을때, 검색command로 이동  -->
-<form action="ACounselingSearchCommand.do" method="post">
+<form action="ACounselingSearch" method="post">
 	<table class="counselingSearchTable" >
 	
 	<!-- 검색  콤보박스 -->
@@ -85,6 +85,7 @@ tr{padding: 5px;}
 
 <!-- table 메인 바 --><h4 align="center">문의 게시판</h4>
 <table class="counselingTable">
+
 	<tr>
 		<th width="41">번호</th>
 		<th  width="82">이름</th>
@@ -104,13 +105,13 @@ tr{padding: 5px;}
 <c:forEach items = "${counselingManagementList}" var = "dto" begin="${beginNum }" end="${endNum }"  varStatus = "status" >
 	<tr>
 		<td align="center"> <a href="counselingContentView?cno=${dto.cno }"> ${dto.cno} </a> </td>
-		<td  align="center"><a href="counselingContentView?cno=${dto.cno }">${dto.cusername }</a></td>
-		<td  align="center"><a href="counselingContentView?cno=${dto.cno }">${dto.cuserid}</a></td>
-		<td  align="center"><a href="counselingContentView?cno=${dto.cno }">${dto.ctitle}</a></td>
-		<td  align="center"><a href="counselingContentView?cno=${dto.cno }">${dto.ccontent}</a></td>
-		<td  align="center"><a href="counselingContentView?cno=${dto.cno }">${dto.cdate}</a></td>
+		<td align="center"> <a href="counselingContentView?cno=${dto.cno }">${dto.cusername }</a></td>
+		<td align="center"> <a href="counselingContentView?cno=${dto.cno }">${dto.cuserid}</a></td>
+		<td align="center"> <a href="counselingContentView?cno=${dto.cno }">${dto.ctitle}</a></td>
+		<td align="center"> <a href="counselingContentView?cno=${dto.cno }">${dto.ccontent}</a></td>
+		<td align="center"> <a href="counselingContentView?cno=${dto.cno }">${dto.cdate}</a></td>
 		
-		<td  align="center"> <form action="ACounselingDeleteCommand.do"> <input type="checkbox" name ="deleteCheck" class="ab" value="${dto.cno }" > </td>
+		<td  align="center"> <form action="counselingDelete"> <input type="checkbox" name ="deleteCheck" class="ab" value="${dto.cno }" > </td>
 	</tr>
 	</c:forEach>
 	<tr>
@@ -125,7 +126,7 @@ tr{padding: 5px;}
 <!-- ---------------페이지 넘김 ---------------- -->
 <center>
 <c:forEach begin="1" end="${totalPage}" varStatus="status" >
-<a href="ACounselingLPagingCommand.do?page=${status.count}">[${status.count}]</a>	
+<a href="ACounselingLPaging?page=${status.count}">[${status.count}]</a>	
 
 </c:forEach>
 
@@ -150,7 +151,7 @@ tr{padding: 5px;}
 		<td  align="center"><a href="simpleconView?scno=${dto.scno }">${dto.sctype}</a></td>
 		<td  align="center"><a href="simpleconView?scno=${dto.scno }">${dto.scuserinfo}</a></td>
 		<td  align="center"><a href="simpleconView?scno=${dto.scno }">${dto.sdate}</a></td>
-	<td  align="center"> <form action="deleteSimple"> <input type="checkbox" name ="deleteCheck1" class="ab1" value="${dto.scno }" > </td>
+	<td  align="center"> <form action="simpleDelete"> <input type="checkbox" name ="deleteCheck1" class="ab1" value="${dto.scno }" > </td>
 		
 		</tr>
 		
