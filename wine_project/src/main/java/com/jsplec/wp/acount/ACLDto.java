@@ -1,4 +1,4 @@
-package com.jsplec.wp.dto;
+package com.jsplec.wp.acount;
 
 import java.sql.Timestamp;
 
@@ -15,19 +15,6 @@ public class ACLDto {
 	String counselingSearchBar;
 	int cviewcount;
 	String canswer;
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
 	
 	

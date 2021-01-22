@@ -1,4 +1,4 @@
-package com.jsplec.wp.dao;
+package com.jsplec.wp.adelivery;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

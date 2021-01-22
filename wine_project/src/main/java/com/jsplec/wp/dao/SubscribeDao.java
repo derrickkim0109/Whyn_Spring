@@ -7,7 +7,7 @@ import java.util.ArrayList;
 
 import javax.naming.Context;
 import javax.naming.InitialContext;
-import javax.security.auth.message.callback.PrivateKeyCallback.Request;
+
 import javax.sql.DataSource;
 
 import com.jsplec.wp.dto.NoticeDto;

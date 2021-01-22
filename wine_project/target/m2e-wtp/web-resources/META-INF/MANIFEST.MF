@@ -1,5 +1,11 @@
 Manifest-Version: 1.0
+<<<<<<< HEAD
 Built-By: nina
 Build-Jdk: 1.8.0_271
+=======
+
+Built-By: derrick
+Build-Jdk: 1.8.0_221
+>>>>>>> d5b15478236cc454a3be6cd502c73b86cd9b5235
 Created-By: Maven Integration for Eclipse
 
