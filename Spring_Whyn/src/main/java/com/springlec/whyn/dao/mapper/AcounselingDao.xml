@@ -11,7 +11,7 @@
  </select>
  
  <select id="counselingSearch" resultType="com.springlec.whyn.acounseling.AcounselingDto">
- SELECT CNO , CUSERNAME, CUSERID, CTITLE,CCONTENT, CDATE FROM COUNSELING WHERE %{param1} LIKE CONCAT('%',#{param2},'%')
+ SELECT CNO , CUSERNAME, CUSERID, CTITLE,CCONTENT, CDATE FROM COUNSELING WHERE ${param1} LIKE CONCAT('%',#{param2},'%')
  </select>
  
  <delete id="counselingDelete">
