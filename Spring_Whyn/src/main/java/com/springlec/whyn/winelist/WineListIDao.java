@@ -13,7 +13,7 @@ public interface WineListIDao {
 		// 원하는 번호의 정보 셀렉트
 		public WineListDto contentDao(String pno);
 		// 삭제
-		public void deleteDao(int pno);
+		public void deleteDao(String pno);
 		
 	}
 

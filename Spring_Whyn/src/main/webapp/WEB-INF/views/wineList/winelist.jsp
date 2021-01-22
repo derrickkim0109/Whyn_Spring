@@ -47,7 +47,7 @@
 			<td>${dto.pcountry}</td>
 			<td>${dto.pcolor}</td>
 			<td >${dto.ptext}</td>
-			<td> <form action="AWineDeleteCommand"> <input type="checkbox" name ="deleteCheck" class="ab" value="${dto.pno }" > </td>
+			<td> <form action="delete"> <input type="checkbox" name ="deleteCheck" class="ab" value="${dto.pno }" > </td>
 			
 		</tr>
 	
