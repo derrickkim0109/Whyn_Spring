@@ -1,4 +1,4 @@
-package com.jsplec.wp.login;
+package com.jsplec.wp.sub;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
