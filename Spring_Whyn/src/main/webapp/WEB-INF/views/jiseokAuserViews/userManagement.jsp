@@ -72,7 +72,7 @@ a{ color:#5a5a5a;}
 		<td  align="center"> <a href="userContentView.do?userno=${dto.userno }"><c:if test="${dto.usersubscribe eq '1'}">구독중</c:if><c:if test="${dto.usersubscribe eq '0'}"></c:if>    </a></td>
 		<td  align="center"> <a href="userContentView.do?userno=${dto.userno }">${dto.userjoindate }</a></td>
 		
-		<td  align="center"> <form action="AUserDeleteCommand.do"> <input type="checkbox" name ="deleteCheck" class="ab" value="${dto.userno }" > </td>
+		<td  align="center"> <form action="AuserListDelete"> <input type="checkbox" name ="deleteCheck" class="ab" value="${dto.userno }" > </td>
 	</tr>
 	</c:forEach>
 	<tr>

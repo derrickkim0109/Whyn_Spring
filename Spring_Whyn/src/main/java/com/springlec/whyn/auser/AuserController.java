@@ -2,12 +2,14 @@ package com.springlec.whyn.auser;
 
 import javax.servlet.http.HttpServletRequest;
 
+
 import org.apache.ibatis.session.SqlSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+
 
 @Controller
 public class AuserController {
@@ -21,10 +23,8 @@ public class AuserController {
 		AuserDao auserDao = sqlSession.getMapper(AuserDao.class);
 		
 		
-		
+		// 유저정보 페이징
 		int RowCount = auserDao.userViewRowCount();
-		
-		
 		int totalPage=(RowCount/10);
 		if(RowCount%10!=0) {
 			totalPage++;
@@ -54,14 +54,8 @@ public class AuserController {
 		int RowCount = auserDao.userViewRowCount();
 		
 		
-//		int totalPage=(RowCount/10);
-//		if(RowCount%10!=0) {
-//			totalPage++;
-//		}
-//
-//		int beginNum=0;
-//		int endNum=9;
-		
+
+		// 유저정보 페이징
 		int nowPage = Integer.parseInt(request.getParameter("page"));
 		int pageRow=10;
 		int beginNum=(1*pageRow)-pageRow;
@@ -86,6 +80,20 @@ public class AuserController {
 		
 		
 		return "jiseokAuserViews/userManagement";
+	}
+	
+	@RequestMapping("AuserListDelete")
+	public String auserListDelete(HttpServletRequest request, Model model) {
+			
+			AuserDao auserDao = sqlSession.getMapper(AuserDao.class);
+			String[] deleteCheck = request.getParameterValues("deleteCheck");
+	      //AUserLDao userdao = new AUserLDao();
+	      for(int i=0;i<deleteCheck.length;i++) {
+	    	  auserDao.userDelete(deleteCheck[i]);
+	    	  
+	    	  //System.out.println(deleteCheck[i]);
+	      }
+	      return "redirect:AuserList";
 	}
 	
 	
