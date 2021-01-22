@@ -25,7 +25,7 @@ import com.springlec.whyn.asimplecounseling.AsimpleCounselingDao;
 /**
  * Handles requests for the application home page.
  */
-
+@Controller
 public class HomeController {
 	
 	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
