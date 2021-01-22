@@ -15,6 +15,10 @@
 	<select id="userViewRowCount" resultType="int">
 		SELECT COUNT(*) FROM USERINFO
 	</select>
+	
+	<delete id="userDelete">
+		DELETE  FROM USERINFO  WHERE USERNO = #{param1}	
+	</delete>
 
 
 
