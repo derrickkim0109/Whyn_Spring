@@ -48,7 +48,7 @@ public class MypageUpdateCommand implements ACommand {
 		dao.mypageUpdate(userno, username, usertel, useraddress1, useraddress2, useraddress3);
 		
 		
-		MyPageIDao dao2 = new MyPageIDao();
+		Main_MyPageIDao dao2 = new Main_MyPageIDao();
 		dao2.deliveryUpdate(userid, dusername, dtel, daddress1, daddress2, daddress3, dmsg);
 		
 		

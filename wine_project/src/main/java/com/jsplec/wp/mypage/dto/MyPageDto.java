@@ -1,4 +1,4 @@
-package com.jsplec.wp.dto;
+package com.jsplec.wp.mypage.dto;
 
 public class MyPageDto {
 	
@@ -75,7 +75,43 @@ public class MyPageDto {
 		this.dusername = dusername;
 		this.dmsg = dmsg;
 	}
+	public MyPageDto(String usertel, String useraddress1, String useraddress2, String useraddress3, String usergender,
+			String userjoindate, String userbday, int usersubscribe) {
+		super();
+		this.usertel = usertel;
+		this.useraddress1 = useraddress1;
+		this.useraddress2 = useraddress2;
+		this.useraddress3 = useraddress3;
+		this.usergender = usergender;
+		this.userjoindate = userjoindate;
+		this.userbday = userbday;
+		this.usersubscribe = usersubscribe;
+	}
 
+	//review Dto
+	public MyPageDto(int reno, String reuserid, String retitle, int rescore, String reinsertdate, int reviewcount) {
+		super();
+		this.reno = reno;
+		this.reuserid = reuserid;
+		this.retitle = retitle;
+		this.rescore = rescore;
+		this.reinsertdate = reinsertdate;
+		this.reviewcount = reviewcount;
+	}
+
+	//subscribe Dto
+	public MyPageDto(int ssubno, String speriod, String sbottle, String senddate, int suserno, String startdate,
+			String enddate, String sprice) {
+		super();
+		this.ssubno = ssubno;
+		this.speriod = speriod;
+		this.sbottle = sbottle;
+		this.senddate = senddate;
+		this.suserno = suserno;
+		this.startdate = startdate;
+		this.enddate = enddate;
+		this.sprice = sprice;
+	}
 	public String getDtel() {
 		return dtel;
 	}
@@ -124,18 +160,6 @@ public class MyPageDto {
 		this.dmsg = dmsg;
 	}
 
-	public MyPageDto(String usertel, String useraddress1, String useraddress2, String useraddress3, String usergender,
-			String userjoindate, String userbday, int usersubscribe) {
-		super();
-		this.usertel = usertel;
-		this.useraddress1 = useraddress1;
-		this.useraddress2 = useraddress2;
-		this.useraddress3 = useraddress3;
-		this.usergender = usergender;
-		this.userjoindate = userjoindate;
-		this.userbday = userbday;
-		this.usersubscribe = usersubscribe;
-	}
 
 	public String getUseraddress1() {
 		return useraddress1;
@@ -161,30 +185,6 @@ public class MyPageDto {
 		this.useraddress3 = useraddress3;
 	}
 
-	//review Dto
-	public MyPageDto(int reno, String reuserid, String retitle, int rescore, String reinsertdate, int reviewcount) {
-		super();
-		this.reno = reno;
-		this.reuserid = reuserid;
-		this.retitle = retitle;
-		this.rescore = rescore;
-		this.reinsertdate = reinsertdate;
-		this.reviewcount = reviewcount;
-	}
-
-	//subscribe Dto
-	public MyPageDto(int ssubno, String speriod, String sbottle, String senddate, int suserno, String startdate,
-			String enddate, String sprice) {
-		super();
-		this.ssubno = ssubno;
-		this.speriod = speriod;
-		this.sbottle = sbottle;
-		this.senddate = senddate;
-		this.suserno = suserno;
-		this.startdate = startdate;
-		this.enddate = enddate;
-		this.sprice = sprice;
-	}
 
 	
 	
