@@ -28,7 +28,7 @@
 	 	<beans:property name="driverClassName" value="com.mysql.cj.jdbc.Driver"/>
 	 	<beans:property name="url" value="jdbc:mysql://localhost:3306/procject?serverTimezone=Asia/Seoul&amp;characterEncoding=utf8&amp;useSSL=FALSE"/>
 	 	<beans:property name="username" value="root"/>
-	 	<beans:property name="password" value="qwer1234"/>
+	 	<beans:property name="password" value="gpwjddl23"/>
 	</beans:bean>
 	
 	<!-- 더 추가할 부분 Mybatis -->
