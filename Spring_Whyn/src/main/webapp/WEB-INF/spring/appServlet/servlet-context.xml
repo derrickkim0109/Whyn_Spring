@@ -26,7 +26,7 @@
 		<!--오픈소스 방식이다(Data Base). 클래스에 필드값 줘야 함. -태현 -->
 	<beans:bean name="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 	 	<beans:property name="driverClassName" value="com.mysql.cj.jdbc.Driver"/>
-	 	<beans:property name="url" value="jdbc:mysql://localhost:3306/ticket?serverTimezone=Asia/Seoul&amp;characterEncoding=utf8&amp;useSSL=FALSE"/>
+	 	<beans:property name="url" value="jdbc:mysql://localhost:3306/procject?serverTimezone=Asia/Seoul&amp;characterEncoding=utf8&amp;useSSL=FALSE"/>
 	 	<beans:property name="username" value="root"/>
 	 	<beans:property name="password" value="qwer1234"/>
 	</beans:bean>
@@ -34,7 +34,7 @@
 	<!-- 더 추가할 부분 Mybatis -->
 	<beans:bean name="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<beans:property name="dataSource" ref="dataSource"/>
-		<beans:property name="mapperLocations" value="classpath:com/springlec/base0901/dao/mapper/*.xml"/>
+		<beans:property name="mapperLocations" value="classpath:com/springlec/whyn/dao/mapper/*.xml"/>
 	</beans:bean>
 	<!-- 여기서 위의 두부분을 다불러오는 것이다. -->
 	<beans:bean name="sqlSession" class="org.mybatis.spring.SqlSessionTemplate">
