@@ -24,7 +24,7 @@ h4{color: #5a5a5a;}
 <h4 align="center"> 매달 15일 회원 정보 </h4>
 
 	
-	<form action="ADeliveryL" method="post">
+	<form action="ADeliveryList" method="post">
 	<table class="usertable" >
 		
 		
@@ -90,4 +90,5 @@ h4{color: #5a5a5a;}
 	
 	
 </body>
+
 </html>
