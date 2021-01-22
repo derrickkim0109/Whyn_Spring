@@ -20,11 +20,11 @@ public class DeliveryDto {
 	private String enddate;
 	private String sprice;
 	
+	
+	
 	public DeliveryDto() {
 		// TODO Auto-generated constructor stub
 	}
-	
-	
 	
 	public DeliveryDto(String dtel, String daddress1, String daddress2, String daddress3, String dusername, String dmsg,
 			String duserid, String speriod, String sbottle, String senddate, String startdate, String enddate,
@@ -156,3 +156,5 @@ public class DeliveryDto {
 	
 	
 }
+
+
