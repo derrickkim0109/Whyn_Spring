@@ -32,13 +32,13 @@
 	</beans:bean>
 	
 	<!-- 더 추가할 부분 Mybatis -->
-	<beans:bean name="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
-		<beans:property name="dataSource" ref="dataSource"/>
+		<beans:bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<beans:property name="dataSource" ref="dataSource" />
 		<beans:property name="mapperLocations" value="classpath:com/springlec/whyn/dao/mapper/*.xml"/>
 	</beans:bean>
 	<!-- 여기서 위의 두부분을 다불러오는 것이다. -->
 	<beans:bean name="sqlSession" class="org.mybatis.spring.SqlSessionTemplate">
-	<beans:constructor-arg index="0" ref="sqlSessionFactory" />
+	<beans:constructor-arg index="0" ref="sqlSessionFactory" ></beans:constructor-arg>
 	</beans:bean>
 	<!--  -->
 	
