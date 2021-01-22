@@ -26,7 +26,7 @@ function update(){
 </script>
 <meta charset="UTF-8">
 
- <%@ include file="adminCategory.jsp"%> 
+ <%@ include file="../adminCategory.jsp"%> 
 <title>공지 확인 </title>
 </head>
 <body>
