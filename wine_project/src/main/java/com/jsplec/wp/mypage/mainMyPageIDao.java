@@ -2,9 +2,7 @@ package com.jsplec.wp.mypage;
 
 import java.util.ArrayList;
 
-import com.jsplec.wp.mypage.dto.MyPageDto;
-
-public interface Main_MyPageIDao {
+public interface mainMyPageIDao {
 
 	// 유저정보
 	public MyPageDto myPageUserinfoView(String userno); 

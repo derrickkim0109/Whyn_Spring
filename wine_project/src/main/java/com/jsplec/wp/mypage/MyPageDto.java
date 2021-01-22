@@ -1,4 +1,4 @@
-package com.jsplec.wp.mypage.dto;
+package com.jsplec.wp.mypage;
 
 public class MyPageDto {
 	
