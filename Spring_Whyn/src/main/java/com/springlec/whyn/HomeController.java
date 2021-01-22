@@ -1,8 +1,10 @@
 package com.springlec.whyn;
 
 import java.text.DateFormat;
+
 import java.util.Date;
 import java.util.Locale;
+
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -15,8 +17,10 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+
 import com.springlec.whyn.acounseling.AcounselingDao;
 import com.springlec.whyn.asimplecounseling.AsimpleCounselingDao;
+
 
 /**
  * Handles requests for the application home page.
@@ -25,11 +29,7 @@ import com.springlec.whyn.asimplecounseling.AsimpleCounselingDao;
 public class HomeController {
 	
 	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
-	
-	
-	/**
-	 * Simply selects the home view to render by returning its name.
-	 */
+
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String home(Locale locale, Model model) {
 		logger.info("Welcome home! The client locale is {}.", locale);
@@ -44,5 +44,6 @@ public class HomeController {
 		return "home";
 	}
 
+	
 	
 }
