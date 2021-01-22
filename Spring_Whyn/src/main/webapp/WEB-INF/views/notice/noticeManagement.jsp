@@ -86,14 +86,14 @@ a{color: #5a5a5a;  }
 		<th width="40"><input type="checkbox" name="all" class="check-all"> </th>
 	</tr>
 	
-<c:forEach items = "${notice }" var = "dto">
+<c:forEach items = "${notice}" var = "dto">
 	<tr>
-		<td align="center" ><a href="noticeContentView.do?nno=${dto.nno }"> ${dto.nno }</a> </td>
+		<td align="center" ><a href="noticeContentView?nno=${dto.nno }"> ${dto.nno }</a> </td>
 		<td  align="center" class="title">
-			<a href="noticeContentView.do?nno=${dto.nno }">${dto.ntitle }</a>
+			<a href="noticeContentView?nno=${dto.nno }">${dto.ntitle }</a>
 		 </td>
-		<td  align="center" width="180"><a href="noticeContentView.do?nno=${dto.nno }">${dto.ninsertdate }</a></td>
-		<td  align="center" width="40"><a href="noticeContentView.do?nno=${dto.nno }">${dto.nviewcount}</a></td>
+		<td  align="center" width="180"><a href="noticeContentView?nno=${dto.nno }">${dto.ninsertdate }</a></td>
+		<td  align="center" width="40"><a href="noticeContentView?nno=${dto.nno }">${dto.nviewcount}</a></td>
 		
 		<td   align="center">  <form action="ANoticeDeleteCommand.do"> <input type="checkbox" name ="deleteCheck" class="ab" value="${dto.nno }" > </td>
 	</tr>

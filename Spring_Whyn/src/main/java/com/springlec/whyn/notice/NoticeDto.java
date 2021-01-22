@@ -4,14 +4,20 @@ import java.sql.Timestamp;
 
 public class NoticeDto {
 	
-	String nno;
+	int nno;
 	String ntitle;
 	String ncontent;
 	Timestamp ninsertdate ;
 	int nviewcount;
 	String nSearchBar;
 	String nSearchBox;
-	public NoticeDto(String nno, String ntitle, String ncontent, Timestamp ninsertdate, int nviewcount,
+	
+	public NoticeDto() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	
+	public NoticeDto(int nno, String ntitle, String ncontent, Timestamp ninsertdate, int nviewcount,
 			String nSearchBar, String nSearchBox) {
 		super();
 		this.nno = nno;
@@ -22,10 +28,10 @@ public class NoticeDto {
 		this.nSearchBar = nSearchBar;
 		this.nSearchBox = nSearchBox;
 	}
-	public String getNno() {
+	public int getNno() {
 		return nno;
 	}
-	public void setNno(String nno) {
+	public void setNno(int nno) {
 		this.nno = nno;
 	}
 	public String getNtitle() {
