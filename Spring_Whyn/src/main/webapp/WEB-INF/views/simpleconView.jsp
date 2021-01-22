@@ -10,7 +10,7 @@
 <body>
 	
 	
-	<form action="ASimpleConLCommand.do" method="post">
+	<form action="counselingManagementList" method="post">
 	
 	<table style="padding: 30px;" >
 	
