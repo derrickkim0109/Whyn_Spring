@@ -16,7 +16,7 @@
 <body>
 
 <h3 align="center" style=" color:#5a5a5a; padding: 40px;" >문의 확인</h3>
-<form action="ACounselingLCommand.do" method="post">
+<form action="counselingManagementList" method="post">
 
 	<table  class="ctable" >
 		
