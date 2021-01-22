@@ -7,22 +7,20 @@
 	<mapper namespace="com.jsplec.wp.sub.MainSubIDao">
 	
 		<select id="listDao" resultType="com.jsplec.wp.sub.MainSubDto">
-			SELECT * FROM friendlist.ADDRESS ORDER BY BID DESC
+		
 		</select>
 		
 		<insert id="writeDao">
-			INSERT INTO friendlist.ADDRESS (bName,bPhone,bAddress,bEmail,bRelation) VALUES(#{param1},#{param2},#{param3},#{param4},#{param5})
+			
 		</insert>
 		
 		<delete id="deleteDao">
-			DELETE FROM friendlist.ADDRESS WHERE bId=#{param1}
+
 		</delete>
 		
-		<select id="content_viewDao" resultType="com.springlec.base.dto.BDto">
-			SELECT * FROM friendlist.ADDRESS WHERE bId=#{param1}
-		</select>
+
 		
 		<update id="modifyDao">
-			Update friendlist.ADDRESS SET bName = #{param1}, bPhone = #{param2}, bAddress=#{param3}, bEmail = #{param4}, bRelation = #{param5} WHERE bId=#{param6}
+
 		</update>
 	</mapper>
