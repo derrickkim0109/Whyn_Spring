@@ -12,6 +12,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.springlec.whyn.HomeController;
+import com.springlec.whyn.auser.AuserDao;
 
 @Controller
 public class NoticeController {
@@ -28,16 +29,80 @@ public class NoticeController {
 	@RequestMapping("/notice")
 	public String notice(HttpServletRequest request,Model model) {
 		NoticeIDao dao = sqlSession.getMapper(NoticeIDao.class);
+		
+
+		// 공지사항 페이징
+		int RowCount = dao.noticeViewRowCount();
+		int totalPage=(RowCount/10);
+		if(RowCount%10!=0) {
+			totalPage++;
+		}
+
+		int beginNum=0;
+		int endNum=9;
+		
+		model.addAttribute("beginNum",beginNum);
+		model.addAttribute("endNum",endNum);
+		model.addAttribute("totalPage",totalPage);
+		model.addAttribute("endNum",endNum);
+		
+		
 		model.addAttribute("notice",dao.noticeManagementList());
 		return "notice/noticeManagement";
 		
 	}
+	@RequestMapping("/noticeListPageing")
+	public String noticeListPageing(HttpServletRequest request,Model model) {
+		NoticeIDao dao = sqlSession.getMapper(NoticeIDao.class);
+
+		
+		
+		
+		int RowCount = dao.noticeViewRowCount();
+		
+		
+
+		// 공지사항 페이징
+		int nowPage = Integer.parseInt(request.getParameter("page"));
+		int pageRow=10;
+		int beginNum=(1*pageRow)-pageRow;
+		int endNum=(1*pageRow)-1;
+		int totalPage=(RowCount/pageRow);
+		if(RowCount%10!=0) {
+			totalPage++;
+		}
+		
+		for(int i=1;i<=totalPage;i++) {
+			if(nowPage==i) {
+				beginNum=(i*pageRow)-pageRow;
+				endNum=(i*pageRow)-1;
+			}
+		}
+		
+		model.addAttribute("beginNum",beginNum);
+		model.addAttribute("endNum",endNum);
+		model.addAttribute("totalPage",totalPage);
+		model.addAttribute("endNum",endNum);
+		model.addAttribute("notice",dao.noticeManagementList());
+		return "notice/noticeManagement";
+		
+		
+	}
 	
-	@RequestMapping("/noticeWrite")
-	public String noticeWrite() {
+	
+	@RequestMapping("/noticeGoWrite")
+	public String noticGoeWrite() {
 		
 		return "notice/noticeWrite";
 	}
+	@RequestMapping("/noticeWrite")
+	public String noticeWrite(HttpServletRequest request,Model model) {
+		NoticeIDao dao = sqlSession.getMapper(NoticeIDao.class);
+		dao.noticeWrite(request.getParameter("ntitle"),request.getParameter("ncontent"));
+		return "redirect:/notice";
+	}
+	
+	
 	@RequestMapping("/noticeView")
 	public String noticeView(HttpServletRequest request,Model model) {
 		NoticeIDao dao = sqlSession.getMapper(NoticeIDao.class);
@@ -46,7 +111,7 @@ public class NoticeController {
 		
 		
 	}
-	@RequestMapping("noticeUpdate")
+	@RequestMapping("/noticeUpdate")
 	public String noticeUpdate(HttpServletRequest request, Model model) {
 		NoticeIDao dao = sqlSession.getMapper(NoticeIDao.class);
 		dao.noticeUpdate(request.getParameter("nno"), request.getParameter("ntitle"), request.getParameter("ncontent"));
@@ -54,7 +119,7 @@ public class NoticeController {
 		
 	}
 	
-	@RequestMapping("noticeDelete")
+	@RequestMapping("/noticeDelete")
 	public String noticeDelete(HttpServletRequest request,Model model) {
 		NoticeIDao dao = sqlSession.getMapper(NoticeIDao.class);
 		String[] deleteCheck = request.getParameterValues("deleteCheck");
@@ -67,7 +132,20 @@ public class NoticeController {
 		return "redirect:/notice";
 	}
 	
+	@RequestMapping("/noticeSearch")
+	public String noticeSearch(HttpServletRequest request,Model model ) {
+		NoticeIDao dao = sqlSession.getMapper(NoticeIDao.class);
 	
+		model.addAttribute("notice",dao.noticeSearch(request.getParameter("nSearchBox"), request.getParameter("nSearchBar")));
+		int beginNum=0;
+		int endNum = 10;
+		model.addAttribute("beginNum",beginNum);
+		model.addAttribute("endNum",endNum);
+		System.out.println("여기"+dao.noticeSearch(request.getParameter("nSearchBox"), request.getParameter("nSearchBar")).size());
+		return "notice/noticeManagement";
+		
+		
+	}
 	
 
 }

@@ -47,17 +47,17 @@ a{color: #5a5a5a;  }
 	
 	<!-- ------------------------------------------ -->
 	
-<!-- 	<form action="ANoticeSearchCommand.do" method="post">
+	<form action="noticeSearch" method="post">
 <table class="noticeSearchTable">
- -->
+
 <!-- 검색 콤보박스 -->
 <tr><td><select name="nSearchBox" >
-	<option value="nno" >번호</option>
-	<option value="ntitle">제목 </option>
-	<option value="ncontent">내용</option>
-	<option value="ninsertdate">작성날짜 </option>
+	<option value="NNO" >번호</option>
+	<option value="NTITLE">제목 </option>
+	<option value="NCONTENT">내용</option>
+	<option value="NINSERTDATE">작성날짜 </option>
 </select></td>
-<td><input type="text" placeholder="번호/제목/내용/작성날짜를 입력 해주세요." name="nSearchBar" value="${setNoticeSearch.nSearchBox }" size="50"></td>
+<td><input type="text" placeholder="번호/제목/내용/작성날짜를 입력 해주세요." name="nSearchBar" size="50"></td>
 <td><input type="submit"value="검색"></td></tr>
 </table>
 </form>
@@ -72,7 +72,7 @@ a{color: #5a5a5a;  }
 
 <!-- ------------------------------- -->
 <table border="0" class="noticeTable">
-	<tr>  <form action="noticeWrite" method="post">
+	<tr>  <form action="noticeGoWrite" method="post">
 
 	<td  colspan="6" align="left"><input type="submit" value="글쓰기" class="write" ></td>
 </form>
@@ -85,7 +85,7 @@ a{color: #5a5a5a;  }
 		<th width="40"><input type="checkbox" name="all" class="check-all"> </th>
 	</tr>
 	
-<c:forEach items = "${notice}" var = "dto">
+<c:forEach items = "${notice}" var = "dto" begin="${beginNum}" end="${ endNum}">
 	<tr>
 		<td align="center" ><a href="noticeView?nno=${dto.nno }"> ${dto.nno }</a> </td>
 		<td  align="center" class="title">
@@ -105,12 +105,11 @@ a{color: #5a5a5a;  }
 
 </table>
 <!-- ------------------------페이지 넘김---------------------------- -->
-<%-- <center>
+ <center>
 <c:forEach begin="1" end="${totalPage}" varStatus="status">
-<a href="ANoticeLPagingCommand.do?page=${status.count}">[${status.count}]</a>	
+<a href="noticeListPageing?page=${status.count}">[${status.count}]</a>	
 
 </c:forEach>
- --%>
-	
+
 </body>
 </html>
