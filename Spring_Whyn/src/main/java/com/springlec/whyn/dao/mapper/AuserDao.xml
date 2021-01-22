@@ -11,6 +11,10 @@
  		<select id="userManagementList" resultType="com.springlec.whyn.auser.AUserLDto">
 		SELECT USERNO , USERID, USERNAME, USERTEL ,USERSUBSCRIBE,USERJOINDATE FROM USERINFO WHERE USERNO > 1
 	</select>
+	
+	<select id="userViewRowCount" resultType="int">
+		SELECT COUNT(*) FROM USERINFO
+	</select>
 
 
 

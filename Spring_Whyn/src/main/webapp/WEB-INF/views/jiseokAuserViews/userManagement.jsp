@@ -63,7 +63,7 @@ a{ color:#5a5a5a;}
 
 <!-- Table안에 보여질 내용들 (이름을 눌렀을때 안에 내용들이 보여져야함. dialog로 해야됨 . go to !!userContentView!! ) -->
 
-	<c:forEach items = "${userList }" var = "dto" >
+	<c:forEach items = "${userList }" var = "dto" begin="${beginNum}" end="${ endNum}" >
 	<tr>
 		<td align="center" style="width: 85px;"> <a href="userContentView.do?userno=${dto.userno }"> ${dto.userno } </a> </td>
 		<td align="center" style="width: 85px;"> <a href="userContentView.do?userno=${dto.userno }"> ${dto.userid }</a> </td>
@@ -84,10 +84,10 @@ a{ color:#5a5a5a;}
 <!-- --------------페이지 넘김---------------- -->	
 	
 	<center>
-<%-- <c:forEach begin="1" end="${totalPage}" varStatus="status">
-<a href="AUserLPagingCommand.do?page=${status.count}">[${status.count}]</a>	
+ <c:forEach begin="1" end="${totalPage}" varStatus="status">
+<a href="AuserListPageing?page=${status.count}">[${status.count}]</a>	
 
-</c:forEach> --%>
+</c:forEach> 
 	
 	
 </body>
