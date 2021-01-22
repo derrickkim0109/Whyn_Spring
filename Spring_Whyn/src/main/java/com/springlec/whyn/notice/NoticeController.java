@@ -32,6 +32,11 @@ public class NoticeController {
 		
 	}
 	
+	@RequestMapping("/noticeWrite")
+	public String noticeWrite() {
+		
+		return "notice/noticeWrite";
+	}
 	
 	
 	
