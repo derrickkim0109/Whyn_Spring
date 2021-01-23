@@ -13,7 +13,7 @@ th {color:#5a5a5a; background-color: #FFE4B5;}
 td{ color:#5a5a5a;}
 a{ color:#5a5a5a;}
 </style>
-<%@ include file="adminCategory.jsp"%> 
+<%@ include file="../adminCategory.jsp"%> 
 <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
     <script>
       $( document ).ready( function() {
@@ -63,7 +63,7 @@ a{ color:#5a5a5a;}
 
 <!-- Table안에 보여질 내용들 (이름을 눌렀을때 안에 내용들이 보여져야함. dialog로 해야됨 . go to !!userContentView!! ) -->
 
-	<c:forEach items = "${userList }" var = "dto" >
+	<c:forEach items = "${userList }" var = "dto" begin="${beginNum}" end="${ endNum}" >
 	<tr>
 		<td align="center" style="width: 85px;"> <a href="userContentView.do?userno=${dto.userno }"> ${dto.userno } </a> </td>
 		<td align="center" style="width: 85px;"> <a href="userContentView.do?userno=${dto.userno }"> ${dto.userid }</a> </td>
@@ -72,7 +72,7 @@ a{ color:#5a5a5a;}
 		<td  align="center"> <a href="userContentView.do?userno=${dto.userno }"><c:if test="${dto.usersubscribe eq '1'}">구독중</c:if><c:if test="${dto.usersubscribe eq '0'}"></c:if>    </a></td>
 		<td  align="center"> <a href="userContentView.do?userno=${dto.userno }">${dto.userjoindate }</a></td>
 		
-		<td  align="center"> <form action="AUserDeleteCommand.do"> <input type="checkbox" name ="deleteCheck" class="ab" value="${dto.userno }" > </td>
+		<td  align="center"> <form action="AuserListDelete"> <input type="checkbox" name ="deleteCheck" class="ab" value="${dto.userno }" > </td>
 	</tr>
 	</c:forEach>
 	<tr>
@@ -84,10 +84,10 @@ a{ color:#5a5a5a;}
 <!-- --------------페이지 넘김---------------- -->	
 	
 	<center>
-<%-- <c:forEach begin="1" end="${totalPage}" varStatus="status">
-<a href="AUserLPagingCommand.do?page=${status.count}">[${status.count}]</a>	
+ <c:forEach begin="1" end="${totalPage}" varStatus="status">
+<a href="AuserListPageing?page=${status.count}">[${status.count}]</a>	
 
-</c:forEach> --%>
+</c:forEach> 
 	
 	
 </body>

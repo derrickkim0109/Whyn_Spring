@@ -18,8 +18,9 @@ public class WineListDto {
 	String wineSearchBar;
 	
 	
+	
 	public WineListDto() {
-		super();
+		
 	}
 
 
@@ -40,6 +41,18 @@ public class WineListDto {
 	}
 	
 	
+
+
+	public WineListDto(int pno, String pname, int pcount, String pcountry, String pcolor, String ptext, int pcontent) {
+		super();
+		this.pno = pno;
+		this.pname = pname;
+		this.pcount = pcount;
+		this.pcountry = pcountry;
+		this.pcolor = pcolor;
+		this.ptext = ptext;
+		this.pcontent = pcontent;
+	}
 
 
 	public int getPno() {

@@ -26,22 +26,22 @@ function update(){
 </script>
 <meta charset="UTF-8">
 
-<%-- <%@ include file="adminCategory.jsp"%> --%>
+ <%@ include file="../adminCategory.jsp"%> 
 <title>공지 확인 </title>
 </head>
 <body>
 	
 	
-	<form action="ANoticeUpdateCommand.do" method="post">
+	<form action="noticeUpdate" method="post">
 	
 	<table style="padding: 30px;" class="updateTable" >
 	
 		
-		<tr> <td>   공지 번호 :<input type="text" readonly="readonly" value="${noticeContentView.nno }" name="nno" style="width: 30px; border: none;" > ㅣ  조회수 : ${ viewCount}  </td></tr>
-		<tr> <td> 제목 : <input type="text" value="${noticeContentView.ntitle }" name="ntitle" class="title" style="width: 200px;"> </td> </tr>&nbsp;&nbsp;&nbsp;
-		<tr> <td><textarea  class="contentText" name="ncontent">${noticeContentView.ncontent }</textarea></td> </tr>
-		<tr> <td>작성날짜 : <input type="text" value="${noticeContentView.ninsertdate }" readonly="readonly"></td> </tr>
-		<tr><td> <input type="submit" value="수정"  onclick="update()" ></form> <form action="ANoticeLCommand.do"><input type="submit" value="뒤로가기"  > </form>  </td> </tr>
+		<tr> <td>   공지 번호 :<input type="text" readonly="readonly" value="${noticeView.nno }" name="nno" style="width: 30px; border: none;" > ㅣ  조회수 :   </td></tr>
+		<tr> <td> 제목 : <input type="text" value="${noticeView.ntitle }" name="ntitle" class="title" style="width: 200px;"> </td> </tr>&nbsp;&nbsp;&nbsp;
+		<tr> <td><textarea  class="contentText" name="ncontent">${noticeView.ncontent }</textarea></td> </tr>
+		<tr> <td>작성날짜 : <input type="text" value="${noticeView.ninsertdate }" readonly="readonly"></td> </tr>
+		<tr><td> <input type="submit" value="수정"  onclick="update()" ></form> <form action="notice"><input type="submit" value="뒤로가기"  > </form>  </td> </tr>
 	
 	
 	

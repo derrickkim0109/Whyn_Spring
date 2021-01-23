@@ -52,7 +52,7 @@ tr{padding: 5px;}
 
 
 <!-- include 카테고리  -->
-<%@include file="adminCategory.jsp" %>
+<%@include file="../adminCategory.jsp" %>
 <h2 align="center">문의 관리 </h2>
 <br>
 
