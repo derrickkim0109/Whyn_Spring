@@ -10,7 +10,7 @@
 
 </style>
 
-<%@include file="adminCategory.jsp" %>
+<%@include file="../adminCategory.jsp" %>
 <title>문의확인</title>
 </head>
 <body>

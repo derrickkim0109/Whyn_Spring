@@ -13,7 +13,7 @@ th {color:#5a5a5a; background-color: #FFE4B5;}
 td{ color:#5a5a5a;}
 a{ color:#5a5a5a;}
 </style>
-<%@ include file="adminCategory.jsp"%> 
+<%@ include file="../adminCategory.jsp"%> 
 <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
     <script>
       $( document ).ready( function() {
