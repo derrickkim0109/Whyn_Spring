@@ -24,12 +24,12 @@
 	<update id="noticeUpdate">
 		UPDATE NOTICE SET NTITLE =#{param2}, NCONTENT =#{param3} WHERE NNO=#{param1}
 	</update>	
-<!-- 	<update id="noticeCount">
-		UPDATE NOTICE SET NVIEWCOUNT = ${param2}+1 WHERE NNO=#{param1}
+ 	<update id="noticeCount">
+		UPDATE NOTICE SET NVIEWCOUNT = #{param2}+1 WHERE NNO=#{param1}
 	</update>
-	<select id="noticeCountSelect" resultType="com.springlec.whyn.notice.NoticeDto">
+	<select id="noticeCountSelect" resultType="int">
 		SELECT NVIEWCOUNT FROM NOTICE WHERE NNO=#{param1}
-	</select> -->
+	</select>
 	<select id="noticeSearch" parameterType = "String" resultType="com.springlec.whyn.notice.NoticeDto">
 		SELECT* FROM NOTICE WHERE ${param1} LIKE CONCAT('%',#{param2},'%')
 	</select>

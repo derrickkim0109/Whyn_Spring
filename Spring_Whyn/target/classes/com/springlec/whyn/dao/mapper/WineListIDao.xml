@@ -30,4 +30,9 @@
 		DELETE FROM PRODUCTLIST WHERE PNO = #{param1} 
 	</insert>
 	
+	<!-- 와인리스트 페이징 -->
+	<select id="wineListViewRowCount" resultType="int">
+		SELECT COUNT(*) FROM PRODUCTLIST
+	</select>
+	
 </mapper>

@@ -14,7 +14,8 @@ public interface WineListIDao {
 		public WineListDto contentDao(String pno);
 		// 삭제
 		public void deleteDao(String pno);
-		
+		// 상품목록 페이징 갯수 세기
+		public int wineListViewRowCount(); 
 	}
 
 

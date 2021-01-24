@@ -44,7 +44,7 @@ a{ color:#5a5a5a;}
 
 <!-- --------------------------------- -->
 <!--검색 눌렀을 경우 검색판단해주는 command로 이동 -->
-<form action="AReviewSearchCommand.do" method="post">
+<form action="AReviewSearchCommand" method="post">
 <table class="reviewSearchTable">
 
 
@@ -83,13 +83,13 @@ a{ color:#5a5a5a;}
 	
 <c:forEach items = "${reviewManagementList }" var = "dto" >
 	<tr>
-		<td align="center"><a href="reviewContentView.do?reno=${dto.reno }">  ${dto.reno} </a></td>
-		<td  align="center"><a href="reviewContentView.do?reno=${dto.reno }">${dto.reuserid }</a></td>
-		<td  align="center"><a href="reviewContentView.do?reno=${dto.reno }">${dto.retitle}</a></td>
-		<td  align="center"><a href="reviewContentView.do?reno=${dto.reno }">${dto.recontent }</a></td>
-		<td  align="center"><a href="reviewContentView.do?reno=${dto.reno }">${dto.reinsertdate }</a></td>
+		<td align="center"><a href="reviewContentView?reno=${dto.reno }">  ${dto.reno} </a></td>
+		<td  align="center"><a href="reviewContentView?reno=${dto.reno }">${dto.reuserid }</a></td>
+		<td  align="center"><a href="reviewContentView?reno=${dto.reno }">${dto.retitle}</a></td>
+		<td  align="center"><a href="reviewContentView?reno=${dto.reno }">${dto.recontent }</a></td>
+		<td  align="center"><a href="reviewContentView?reno=${dto.reno }">${dto.reinsertdate }</a></td>
 		
-		<td  align="center"> <form action="AReviewDeleteCommand.do"> <input type="checkbox" name ="deleteCheck" class="ab" value="${dto.reno }" > </td>
+		<td  align="center"> <form action="AReviewDeleteCommand"> <input type="checkbox" name ="deleteCheck" class="ab" value="${dto.reno }" > </td>
 	</tr>
 	</c:forEach>
 	<tr>
@@ -104,7 +104,7 @@ a{ color:#5a5a5a;}
 <!-- ------------------------페이지 넘김---------------------------- -->
 <center>
 <c:forEach begin="1" end="${totalPage}" varStatus="status">
-<a href="AReviewLPagingCommand.do?page=${status.count}">[${status.count}]</a>	
+<a href="AReviewLPagingCommand?page=${status.count}">[${status.count}]</a>	
 
 </c:forEach>
 

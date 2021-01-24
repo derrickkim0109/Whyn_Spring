@@ -107,8 +107,13 @@ public class NoticeController {
 	
 	@RequestMapping("/noticeView")
 	public String noticeView(HttpServletRequest request,Model model) {
+		System.out.println("noticeView");
 		NoticeIDao dao = sqlSession.getMapper(NoticeIDao.class);
-		model.addAttribute("noticeView",dao.noticeContentView(request.getParameter("nno")));
+		String nno =request.getParameter("nno");
+		String count = Integer.toString(dao.noticeCountSelect(nno));
+		System.out.println(count);
+		dao.noticeCount(nno,count);
+		model.addAttribute("noticeView",dao.noticeContentView(nno));
 		return "notice/noticeView";
 		
 		
