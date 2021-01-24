@@ -103,6 +103,8 @@ public class NoticeController {
 	}
 	
 	
+	
+	
 	@RequestMapping("/noticeView")
 	public String noticeView(HttpServletRequest request,Model model) {
 		NoticeIDao dao = sqlSession.getMapper(NoticeIDao.class);
@@ -111,6 +113,23 @@ public class NoticeController {
 		
 		
 	}
+//	@RequestMapping("/noticeView")
+//	public String noticeCount(HttpServletRequest request,Model model) {
+//		NoticeIDao dao = sqlSession.getMapper(NoticeIDao.class);
+//		dao.noticeCount(request.getParameter("nno"),request.getParameter("nviewcount"));
+//		return "notice/noticeView";
+//	}
+//	@RequestMapping("/noticeView")
+//	public String noticeCountSelect(HttpServletRequest request,Model model) {
+//		NoticeIDao dao = sqlSession.getMapper(NoticeIDao.class);
+//		model.addAttribute("nviewcount",dao.noticeCountSelect(request.getParameter("nno")));
+//		return "notice/noticeView";
+//			
+//	}
+	
+	
+	
+	
 	@RequestMapping("/noticeUpdate")
 	public String noticeUpdate(HttpServletRequest request, Model model) {
 		NoticeIDao dao = sqlSession.getMapper(NoticeIDao.class);
@@ -137,7 +156,7 @@ public class NoticeController {
 		NoticeIDao dao = sqlSession.getMapper(NoticeIDao.class);
 	
 		model.addAttribute("notice",dao.noticeSearch(request.getParameter("nSearchBox"), request.getParameter("nSearchBar")));
-		int beginNum=0;
+		int beginNum=0; //이게 없으면 페이징이 안돼서 검색한게 몇개가 된지 모름 글서 하나만뜸. 글서 이거해야
 		int endNum = 10;
 		model.addAttribute("beginNum",beginNum);
 		model.addAttribute("endNum",endNum);
@@ -146,6 +165,8 @@ public class NoticeController {
 		
 		
 	}
+	
+	
 	
 
 }

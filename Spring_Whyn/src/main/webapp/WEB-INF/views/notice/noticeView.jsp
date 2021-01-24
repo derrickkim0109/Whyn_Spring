@@ -37,7 +37,7 @@ function update(){
 	<table style="padding: 30px;" class="updateTable" >
 	
 		
-		<tr> <td>   공지 번호 :<input type="text" readonly="readonly" value="${noticeView.nno }" name="nno" style="width: 30px; border: none;" > ㅣ  조회수 :   </td></tr>
+		<tr> <td>   공지 번호 :<input type="text" readonly="readonly" value="${noticeView.nno }" name="nno" style="width: 30px; border: none;" > ㅣ  조회수 : <input type="text" readonly="readonly" value="${noticeView.nviewcount }" name="nviewcount"  style="width: 30px; border: none;"> </td></tr>
 		<tr> <td> 제목 : <input type="text" value="${noticeView.ntitle }" name="ntitle" class="title" style="width: 200px;"> </td> </tr>&nbsp;&nbsp;&nbsp;
 		<tr> <td><textarea  class="contentText" name="ncontent">${noticeView.ncontent }</textarea></td> </tr>
 		<tr> <td>작성날짜 : <input type="text" value="${noticeView.ninsertdate }" readonly="readonly"></td> </tr>
