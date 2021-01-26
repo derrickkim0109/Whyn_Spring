@@ -12,7 +12,7 @@
 		</select>
 		
 		<select id="reviewSearch" resultType="com.springlec.whyn.areview.aReViewDto">
-			SELECT RENO , REUSERID, RETITLE, RECONTENT,REINSERTDATE FROM REVIEW  
+			SELECT RENO , REUSERID, RETITLE, RECONTENT,REINSERTDATE FROM REVIEW where #{param1} like '%#{param2}%'
 		</select>
 		
 		<delete id="reviewDelete">
@@ -46,5 +46,15 @@
 		<select id="todayReviewContentView" resultType="com.springlec.whyn.areview.aReViewDto">
 			SELECT * FROM REVIEW WHERE DATE_FORMAT(REINSERTDATE, "%Y-%M-%D") = CURDATE()
 		</select>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		
 	</mapper>

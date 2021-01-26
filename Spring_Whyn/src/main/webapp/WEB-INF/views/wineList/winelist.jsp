@@ -39,7 +39,7 @@
 		<th width="40"><input type="checkbox" name="all" class="check-all"> </th>
 	</tr>
 	
- 	<c:forEach items="${winelist}" var="dto">
+ 	<c:forEach items="${winelist}" var="dto" begin="${beginNum}" end="${ endNum}">
 		<tr>
 			<td><a href="wineContentView?pno=${dto.pno}">${dto.pno}</a></td>
 			<td align="center"><img src="${pageContext.request.contextPath}/resources/${dto.pimage}" width="40" ></td>
@@ -67,7 +67,13 @@
 					<input type="submit" value="글작성" />
 
 	
+	
+<center>
+<c:forEach begin="1" end="${totalPage}" varStatus="status">
+<a href="AWineLPaging?page=${status.count}">[${status.count}]</a>	
 
+
+</c:forEach>
 
 			
 <br><br><br><br>

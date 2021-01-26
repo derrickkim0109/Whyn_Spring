@@ -2,6 +2,7 @@ package com.springlec.whyn.areview;
 
 import java.util.ArrayList;
 
+
 public interface aReViewIDao {
 
 	// 리뷰 리스트 띄우기
@@ -23,5 +24,9 @@ public interface aReViewIDao {
 	// 리뷰 눌렀을때 보이기
 	public aReViewDto newReviewContentView(String reno);
 	// 리뷰 눌렀을때 보이기
-	public aReViewDto todayReviewContentView();
+	public aReViewDto todayReviewContentView(String reno);
+	
+	public aReViewDto searchdto(String reviewSearchBox, String reviewSearchBar);
+	
+
 }

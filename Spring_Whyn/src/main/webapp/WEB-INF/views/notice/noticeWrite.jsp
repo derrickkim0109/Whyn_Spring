@@ -12,7 +12,7 @@
 </style>
 
 
-<%-- <%@ include file="adminCategory.jsp"%> --%>
+<%@ include file="../adminCategory.jsp"%> 
 
 <title>공지 글쓰기</title>
 </head>
@@ -24,7 +24,7 @@
 		<tr> <td> 내용<textarea name="ncontent" class="contentText" ></textarea></td> </tr>
 		<tr><td> <input type="submit" value="입력하기"> </td> </tr>
 	</form>
-		 <tr><td><form action="ANoticeLCommand.do"><input type="submit" value="뒤로가기"  > </form></td></tr>
+		 <tr><td><form action="notice"><input type="submit" value="뒤로가기"  > </form></td></tr>
 	
 	
 	</table>
