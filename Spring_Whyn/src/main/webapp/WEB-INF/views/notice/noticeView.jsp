@@ -32,7 +32,7 @@ function update(){
 <body>
 	
 	
-	<form action="../ANoticeUpdateCommand.do" method="post">
+	<form action="ANoticeUpdateCommand.do" method="post">
 	
 	<table style="padding: 30px;" class="updateTable" >
 	
